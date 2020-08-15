@@ -1,0 +1,7 @@
+
+type Todo {
+  _id: String
+  activity: String
+  completed: Boolean
+}
+

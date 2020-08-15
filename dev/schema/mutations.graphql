@@ -1,0 +1,8 @@
+
+type Mutation {
+  createTodo(activity: String!, completed: Boolean!): Todo
+  updateActivity(_id: String!, activity: String): Todo
+  setCompleted(_id: String!, completed: Boolean!): Todo
+  deleteTodo(_id: String!): Todo
+
+}
