@@ -3,9 +3,9 @@ try:
     from dev.model.TodoItem import TodoItem
 except ImportError:
     from dev.DAO import Todo
+    from Todo import Todo
     from dev.model import TodoItem
-    Todo = Todo.Todo
-    TodoItem = TodoItem.TodoItem
+    from TodoItem import TodoItem
     
 def fetchAll():
     todoList = []

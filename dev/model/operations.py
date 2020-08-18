@@ -5,6 +5,8 @@ try:
 except ImportError:
     from dev.model import TodoItem
     from dev.DAO import helpers
+    from TodoItem import TodoItem
+    from helpers import create, delete, fetchAll, setCompleted, updateActivity 
 
 
 query = QueryType()
