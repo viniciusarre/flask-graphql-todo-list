@@ -1,6 +1,12 @@
-from dev.DAO.Todo import Todo
-from dev.model.TodoItem import TodoItem
-
+try:
+    from dev.DAO.Todo import Todo
+    from dev.model.TodoItem import TodoItem
+except ImportError:
+    from dev.DAO import Todo
+    from dev.model import TodoItem
+    Todo = Todo.Todo
+    TodoItem = TodoItem.TodoItem
+    
 def fetchAll():
     todoList = []
     for todo in Todo.objects:

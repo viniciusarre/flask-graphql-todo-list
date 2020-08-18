@@ -1,6 +1,11 @@
 from ariadne import QueryType, MutationType
-from dev.model.TodoItem import TodoItem
-from dev.DAO.helpers import create, delete, fetchAll, setCompleted, updateActivity
+try:
+    from dev.model.TodoItem import TodoItem
+    from dev.DAO.helpers import create, delete, fetchAll, setCompleted, updateActivity
+except ImportError:
+    from dev.model import TodoItem
+    from dev.DAO import helpers
+
 
 query = QueryType()
 mutation = MutationType()
